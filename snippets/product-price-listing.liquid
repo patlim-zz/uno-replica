@@ -53,11 +53,11 @@
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span>
     </dt>
     <dd>
-      <span class="price-item price-item--regular">
+      <span class="price-custom price-item price-item--regular">
         {%- if product.price_varies -%}
           {{ 'products.product.from_lowest_price_html' | t: lowest_price: money_price }}
         {%- else -%}
-          {{ money_price }}
+          Starting {{ money_price }}
         {%- endif -%}
       </span>
     </dd>

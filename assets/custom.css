@@ -42,4 +42,23 @@
       -ms-flex-align: end;
           align-items: flex-end;
 }
+
+.collection-custom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  width: 100vw;
+  padding: 0 50px;
+  margin: 0;
+  max-width: none;
+}
+
+.collection-desc-custom {
+  text-align: left;
+}
+
+.price-custom {
+  color: grey;
+}
 /*# sourceMappingURL=custom.css.map */
