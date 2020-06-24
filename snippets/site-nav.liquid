@@ -27,7 +27,7 @@
           <span class="site-nav__label">{{ link.title | escape }}</span>
         </button>
 
-        <div class="site-nav__dropdown{% if three_level_nav %} site-nav__dropdown--centered{% endif %}" id="SiteNavLabel-{{ child_list_handle }}">
+        <div class="dropdown-custom site-nav__dropdown{% if three_level_nav %} site-nav__dropdown--centered{% endif %}" id="SiteNavLabel-{{ child_list_handle }}">
           {% if three_level_nav %}
             <div class="site-nav__childlist">
               <ul class="site-nav__childlist-grid">
@@ -63,7 +63,8 @@
             </div>
 
           {% else %}
-            <ul>
+            <div class="dropdown-title-custom">{{ link.title }}</div>
+            <ul class="dropdown-custom">
               {% for childlink in link.links %}
                 <li>
                   <a href="{{ childlink.url }}"

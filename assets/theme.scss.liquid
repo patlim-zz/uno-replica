@@ -2655,27 +2655,27 @@ textarea {
 
 .site-nav__dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
   padding: 11px 30px 11px 0;
   margin: 0;
   z-index: $z-index-dropdown;
-  text-align: left;
-  border: 1px solid $color-border;
   background: $color-bg;
-  left: -1px;
-  top: 41px;
+  top: 60px;
   width: 100vw;
+  height: 70vh;
 
   .site-nav__link {
     padding: 4px 15px 5px;
   }
 
   .site-nav--active-dropdown & {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 
   li {
     display: block;
+    text-align: left;
   }
 }
 
