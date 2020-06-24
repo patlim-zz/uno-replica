@@ -16,7 +16,7 @@
 
 {% include 'search-drawer' %}
 
-{{ 'header.css' | asset_url | stylesheet_tag }}
+{{ 'custom.css' | asset_url | stylesheet_tag }}
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>
   {% if section.settings.message %}

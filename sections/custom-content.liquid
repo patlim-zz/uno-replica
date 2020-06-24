@@ -1,11 +1,13 @@
-<div class="page-width">
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-custom page-width">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
       <h4 class="h2">{{ section.settings.title | escape }}</h4>
     </div>
   {% endif %}
 
-  <div class="custom-content">
+  <div class="custom-content-custom custom-content">
     {%- assign block_width_mobile = '' -%}
 
     {% for block in section.blocks %}

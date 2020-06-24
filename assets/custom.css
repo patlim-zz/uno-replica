@@ -1,0 +1,45 @@
+.header-custom {
+  border: none;
+}
+
+.nav-custom {
+  width: 80%;
+  float: right !important;
+}
+
+.nav-split {
+  padding-left: 50px;
+}
+
+.dropdown-title-custom {
+  text-align: right;
+  padding-top: 34px;
+  padding-right: 40px;
+  color: red;
+  font-size: xx-large;
+}
+
+.dropdown-custom {
+  padding-top: 30px;
+  font-size: xx-large;
+  line-height: 90%;
+}
+
+.custom-custom {
+  padding-left: 0 !important;
+  max-width: 100vw;
+}
+
+.custom-content-custom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+
+.custom__item--text {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+/*# sourceMappingURL=custom.css.map */

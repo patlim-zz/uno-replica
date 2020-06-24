@@ -24,4 +24,17 @@
   font-size: xx-large;
   line-height: 90%;
 }
-/*# sourceMappingURL=header.css.map */
+
+.custom-custom {
+  padding-left: 0 !important;
+  max-width: 100vw;
+}
+
+.custom-content-custom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.custom__item--text {
+  align-items: flex-end;
+}
