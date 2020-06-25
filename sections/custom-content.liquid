@@ -1,11 +1,22 @@
+{% if section.settings.title == "The Uno Promise" %}
+  <div class="section-header-custom">
+    <h4 class="h2">{{ section.settings.title | escape }}</h4>
+  </div>
+{% endif %}
+
 <div class="custom-custom page-width">
-  {% if section.settings.title != blank %}
+  <!-- {% if section.settings.title != blank %}
     <div class="section-header text-center">
       <h4 class="h2">{{ section.settings.title | escape }}</h4>
     </div>
-  {% endif %}
+  {% endif %} -->
 
-  <div class="custom-content-custom custom-content">
+  <div class="custom-content {% if section.settings.title contains "Promise" %}
+    promise-custom
+  {% endif %}
+  {% if section.settings.title contains "Quality" %}
+    custom-content-custom
+  {% endif %}">
     {%- assign block_width_mobile = '' -%}
 
     {% for block in section.blocks %}
@@ -72,7 +83,7 @@
             {% when 'text' %}
               <div class="medium-up--text-{{ block.settings.align_text }}">
                 {% if block.settings.title != blank %}
-                  <h4 class="h3">{{ block.settings.title | escape }}</h4>
+                  <!-- <h4 class="h3">{{ block.settings.title | escape }}</h4> -->
                 {% endif %}
                 {% if block.settings.text != blank %}
                   <div class="rte-setting rte">{{ block.settings.text }}</div>

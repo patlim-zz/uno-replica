@@ -48,18 +48,32 @@
   max-width: none;
 }
 
+.section-header-custom {
+  padding: 0 50px;
+}
+
 .collection-desc-custom {
   text-align: left;
 }
 
-.collection-grid-custom {
-  // justify-content: right;
-}
-
-.collection-grid__item-custom {
-
-}
-
 .price-custom {
   color: grey;
+}
+
+.promise-custom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 50px;
+}
+
+.section-header-custom {
+  padding: 0 50px;
+}
+
+.custom__item-inner--html {
+  width: 90%;
+  p {
+    color: grey;
+    padding-left: 5px;
+  }
 }
