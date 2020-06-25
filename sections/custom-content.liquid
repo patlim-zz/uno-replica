@@ -1,4 +1,4 @@
-{% if section.settings.title == "The Uno Promise" %}
+{% if section.settings.title == "The Uno Promise" or section.settings.title contains "Categories"%}
   <div class="section-header-custom">
     <h4 class="h2">{{ section.settings.title | escape }}</h4>
   </div>
@@ -11,8 +11,11 @@
     </div>
   {% endif %} -->
 
-  <div class="custom-content {% if section.settings.title contains "Promise" %}
+  <div class="custom-content {% if section.settings.title contains "Promise"%}
     promise-custom
+  {% endif %}
+  {% if section.settings.title contains "Categories" %}
+    categories-custom
   {% endif %}
   {% if section.settings.title contains "Quality" %}
     custom-content-custom
