@@ -70,12 +70,8 @@
   padding: 0 50px;
 }
 
-.custom__item-inner--html {
-  width: 90%;
-  p {
-    color: grey;
-    padding-left: 5px;
-  }
+.list-custom {
+  align-content: flex-start;
 }
 
 .categories-custom {
