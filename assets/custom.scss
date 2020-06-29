@@ -88,5 +88,5 @@
 .collection-template-custom {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  background-color: blue;
+  // this works on the dom, but for some reason isn't working??
 }
