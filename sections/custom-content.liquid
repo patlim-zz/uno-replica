@@ -135,15 +135,24 @@
               {% endif %}
             {%- when 'link_list' -%}
               {%- assign custom_linklist = block.settings.menu -%}
+              <script>
+                var category = document.getElementsByClassName("category-menu");
+                var subCategory = document.getElementsByClassName("category-submenu");
+                category.addEventListener('click', () => {
+                  subCategory.classList.add("active");
+                })
+              </script>
               <ul class="list--inline custom__linklist">
                 {%- for link in linklists[custom_linklist].links -%}
                   <li class="custom__linklist-item">
-                    <a href="{{ link.url }}" class="custom__linklist-link">
-                      <h2>{{ link.title | escape }}</h2>
+                    <button class="category-menu">test</button>
+                    <a class="custom__linklist-link" id={{ link.title }}>
+                    <h2>{{ link.title | escape }}</h2>
                     </a>
                   </li>
                 {%- endfor -%}
               </ul>
+              
 
             {%- when 'blog' -%}
               {%- assign blog = blogs[block.settings.blog] -%}
@@ -330,10 +339,13 @@
           {% endcase %}
         </div>
       </div>
-
-    {% endfor %}
-  </div>
-
+      
+      {% endfor %}
+    </div>
+    
+    <div class="category-submenu">
+      <h2>Test</h2>
+    </div>
   {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
   {% endif %}
