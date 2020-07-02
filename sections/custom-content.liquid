@@ -135,23 +135,29 @@
               {% endif %}
             {%- when 'link_list' -%}
               {%- assign custom_linklist = block.settings.menu -%}
-              <script>
-                var category = document.getElementsByClassName("category-menu");
-                var subCategory = document.getElementsByClassName("category-submenu");
-                category.addEventListener('click', () => {
-                  subCategory.classList.add("active");
-                })
-              </script>
               <ul class="list--inline custom__linklist">
                 {%- for link in linklists[custom_linklist].links -%}
                   <li class="custom__linklist-item">
-                    <button class="category-menu">test</button>
-                    <a class="custom__linklist-link" id={{ link.title }}>
-                    <h2>{{ link.title | escape }}</h2>
+                    <a class="custom__linklist-link category-menu" id={{ link.title }}>
+                      <h2>{{ link.title | escape }}</h2>
                     </a>
                   </li>
                 {%- endfor -%}
               </ul>
+              <div class="sub-menu" id="sub-Desks">
+                <h2>Reception</h2>
+                <h2>Standing Desks</h2>
+                <h2>Fixed Height</h2>
+                <h2>Work Stations</h2>
+              </div>
+              <div class="sub-menu" id="sub-Storage">
+                <h2>Cupboards</h2>
+                <h2>Mobiles</h2>
+                <h2>Bookcases</h2>
+                <h2>Credenzas</h2>
+                <h2>Filing Cabinets</h2>
+                <h2>Tambours</h2>
+              </div>
               
 
             {%- when 'blog' -%}
@@ -343,11 +349,9 @@
       {% endfor %}
     </div>
     
-    <div class="category-submenu">
-      <h2>Test</h2>
-    </div>
-  {% if section.blocks.size == 0 %}
+    {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
+        
   {% endif %}
 </div>
 

@@ -2366,6 +2366,19 @@ theme.Header = (function() {
 
   var cache = {};
 
+  var Desks = document.getElementById("Desks");
+  Desks.addEventListener('click', () => {
+    document.getElementById("sub-Storage").classList.remove("show");
+    document.getElementById("sub-Desks").classList.toggle("show");
+  })
+
+  var Storage = document.getElementById("Storage");
+  Storage.addEventListener('click', () => {
+    document.getElementById("sub-Desks").classList.remove("show");
+    document.getElementById("sub-Storage").classList.toggle("show");
+  })
+
+
   function init() {
     cacheSelectors();
     styleDropdowns($(selectors.siteNavHasDropdown));
