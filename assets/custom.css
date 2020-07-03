@@ -91,16 +91,13 @@
 .categories-custom {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 4fr;
-      grid-template-columns: 1fr 4fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
   padding: 0 50px;
 }
 
 .custom__item-inner--link_list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  display: block;
 }
 
 .custom__item--1593081417129 {
@@ -112,6 +109,7 @@
 
 .sub-menu {
   display: none;
+  padding-left: 30px;
 }
 
 .show {
