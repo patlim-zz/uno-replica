@@ -24,7 +24,6 @@
 }
 
 .dropdown-custom {
-  position: absolute;
   padding-top: 30px;
   font-size: xx-large;
   line-height: 90%;
@@ -86,21 +85,22 @@
 }
 
 .custom__item-inner--link_list {
-  display: block;
-  // this works on the dom, but for some reason isn't working??
-}
-
-.custom__item--1593081417129 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.sub {
+.list--inline li {
+  display: list-item;
 }
 
 .sub-menu {
   display: none;
-  padding-left: 30px;
+  color: grey;
+  h2 {
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 .show {

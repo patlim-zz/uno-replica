@@ -24,7 +24,6 @@
 }
 
 .dropdown-custom {
-  position: absolute;
   padding-top: 30px;
   font-size: xx-large;
   line-height: 90%;
@@ -97,19 +96,23 @@
 }
 
 .custom__item-inner--link_list {
-  display: block;
-}
-
-.custom__item--1593081417129 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.list--inline li {
+  display: list-item;
 }
 
 .sub-menu {
   display: none;
-  padding-left: 30px;
+  color: grey;
+}
+
+.sub-menu h2:hover {
+  color: black;
 }
 
 .show {
