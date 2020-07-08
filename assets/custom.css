@@ -181,4 +181,11 @@
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
 }
+
+.title-custom {
+  background: blue;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 /*# sourceMappingURL=custom.css.map */

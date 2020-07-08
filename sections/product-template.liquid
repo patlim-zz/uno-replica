@@ -37,8 +37,10 @@
 
   <div class="product-grid-custom grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
     <div class="grid__item">
-      <h1 class="product-single__title">{{ product.title }}</h1>
-      <p>Diam in venenatis, henderit id sit felis ullamcorper sed maecenas</p>
+      <div class="title-custom">
+        <h1 class="product-single__title">{{ product.title }}</h1>
+        <p>Diam in venenatis, henderit id sit felis ullamcorper sed maecenas</p>
+      </div>
     </div>
     <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}

@@ -162,3 +162,9 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+
+.title-custom {
+  background: blue;
+  position: sticky;
+  top: 0;
+}
