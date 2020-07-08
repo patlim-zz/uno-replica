@@ -160,4 +160,25 @@
   position: absolute;
   top: 0;
 }
+
+.product-thumbnails-custom {
+  display: block;
+}
+
+.product-thumbnails-custom img {
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.product-single__media-wrapper {
+  display: none;
+}
+
+.product-grid-custom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
 /*# sourceMappingURL=custom.css.map */

@@ -145,3 +145,20 @@
     top: 0;
   }
 }
+
+.product-thumbnails-custom {
+  display: block;
+  img {
+    height: 500px;
+    object-fit: contain;
+  }
+}
+
+.product-single__media-wrapper {
+  display: none;
+}
+
+.product-grid-custom {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
