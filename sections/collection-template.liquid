@@ -18,14 +18,16 @@
 {% endif %}
 
 {% paginate collection.products by limit %}
-
+<h1 class="collection-title">
+  <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
+  {{ collection.title }}
+</h1>
 <div class="collection-template-custom" data-section-id="{{ section.id }}" data-section-type="collection-template">
   <header class="collection-header">
     {%- assign is_filter_by_available = false -%}
     {%- if section.settings.tags_enable and collection.all_tags.size > 0 -%}
       {%- assign is_filter_by_available = true -%}
-    {%- endif -%}
-
+    {%- endif -%}]
     {% if section.settings.show_collection_image and collection.image %}
       <div class="collection-hero">
         <div class="collection-hero__image ratio-container lazyload js"
@@ -45,7 +47,7 @@
       </div>
       {% if is_filter_by_available == false and section.settings.sort_enable == false %}
         <div class="page-width">
-          <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
+          <!-- <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span> -->
         </div>
       {% endif %}
       {% if collection.description != blank %}
@@ -55,11 +57,7 @@
       {% endif %}
     {% else %}
       <div class="page-width">
-        <div class="section-header text-center">
-          <h1>
-              <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
-              {{ collection.title }}
-          </h1>
+        <div class="section-header text-left">
           {% if collection.description != blank %}
             <div class="rte">
               {{ collection.description }}
@@ -116,7 +114,7 @@
             </div>
 
             <div class="filters-toolbar__item filters-toolbar__item--count">
-              <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
+              <!-- <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span> -->
             </div>
           </div>
         </div>
