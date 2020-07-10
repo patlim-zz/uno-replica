@@ -84,7 +84,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 0 50px;
-  &--html1, &--html2 {
+  &--html1,
+  &--html2 {
     p {
       padding-left: 10px;
       color: grey;
@@ -149,7 +150,6 @@
 .product-thumbnails-custom {
   display: block;
   img {
-    height: 500px;
     object-fit: contain;
   }
 }
@@ -161,10 +161,70 @@
 .product-grid-custom {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-areas: "title content";
 }
 
 .title-custom {
-  background: blue;
-  position: sticky;
+  grid-area: title;
   top: 0;
+}
+
+.grid-content {
+  grid-area: content;
+  overflow: auto;
+}
+
+.thumbnails-wrapper {
+  margin-top: 100px;
+  height: 100vh;
+}
+
+.product-detail-custom {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.product__price {
+  margin-top: 30px;
+
+  .price-item {
+    font-weight: lighter;
+    font-size: 30px;
+  }
+}
+
+.product-single__description {
+  padding: 0 10px;
+  font-size: 12px;
+  .desc-point {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  .desc-extra {
+    margin-top: 10px;
+    p {
+      color: grey;
+      margin: 0;
+    }
+  }
+}
+
+.product-form {
+  font-size: 12px;
+  font-weight: bold;
+  select {
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.product-form__controls-group--submit {
+  grid-column: 2 / 3;
+  button {
+    border: none;
+    padding-left: 30px;
+    text-align: left;
+    font-size: 25px;
+  }
 }
