@@ -41,7 +41,7 @@
         <p>Diam in venenatis, henderit id sit felis ullamcorper sed maecenas</p>
       </div>
     </div>
-    <div class="gc-4-13 grid-content grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+    <div class="gc-4-13 gr-2-3 grid-content grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
       {%- for media in product.media -%}
@@ -234,7 +234,7 @@
             {% endif %}
           </div>
           
-          <div class="gc-4-13 product-form__controls-group product-form__controls-group--submit">
+          <div class="gc-4-13 gr-3-4 product-form__controls-group product-form__controls-group--submit">
             <div class="product-form__item product-form__item--submit
               {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
               {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
