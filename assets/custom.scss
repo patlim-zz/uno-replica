@@ -158,22 +158,6 @@
   display: none;
 }
 
-.product-grid-custom {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas: "title content";
-}
-
-.title-custom {
-  grid-area: title;
-  top: 0;
-}
-
-.grid-content {
-  grid-area: content;
-  overflow: auto;
-}
-
 .thumbnails-wrapper {
   margin-top: 100px;
   height: 100vh;
@@ -191,6 +175,15 @@
     font-weight: lighter;
     font-size: 30px;
   }
+}
+
+.page-container {
+  overflow: unset !important;
+}
+
+.title-custom {
+  position: sticky;
+  top: 0;
 }
 
 .product-single__description {

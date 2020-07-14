@@ -34,14 +34,14 @@
       {%- assign height = 1090 -%}
       {%- assign enable_image_zoom = false -%}
   {% endcase %}
-  <div class="grid-auto product-grid-custom grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
-    <div class="gc-1-4 grid__item">
+  <div class="grid-auto product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+    <div class="gc-1-4">
       <div class="title-custom">
         <h1 class="product-single__title">{{ product.title }}</h1>
         <p>Diam in venenatis, henderit id sit felis ullamcorper sed maecenas</p>
       </div>
     </div>
-    <div class="gc-4-13 gr-2-3 grid-content grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+    <div class="gc-4-13 gr-2-3 grid-content product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
       {%- for media in product.media -%}
