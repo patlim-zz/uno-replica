@@ -4,14 +4,14 @@
   </div>
 {% endif %}
 
-<div class="custom-custom page-width">
+<div class="page-width">
   <!-- {% if section.settings.title != blank %}
     <div class="section-header text-center">
       <h4 class="h2">{{ section.settings.title | escape }}</h4>
     </div>
   {% endif %} -->
 
-  <div class="custom-content {% if section.settings.title contains "Promise"%}
+  <div class="grid-auto custom-content {% if section.settings.title contains "Promise"%}
     promise-custom
   {% endif %}
   {% if section.settings.title contains "Categories" %}
@@ -59,7 +59,7 @@
           {% include 'image-style', image: block.settings.image, height: max_height, wrapper_id: img_wrapper_id, img_id: img_id %}
         {% endunless %}
       {% endif %}
-
+      
       <div class="custom__item custom__item--{{ block.type }} custom__item--{{ block.id }} {{ block_width_mobile }} {{ block_width }}{% if block.settings.alignment %} align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
         <div class="custom__item-inner custom__item-inner--{{ block.type }} "{% if block.type == 'image' %} id="{{ img_wrapper_id }}"{% endif %}>
           {% case block.type %}
