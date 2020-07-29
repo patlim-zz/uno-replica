@@ -37,8 +37,8 @@
   <div class="grid-auto product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}" style="grid-template-rows: 150px auto">
     <div class="gr-1-3 gc-1-4">
       <div style="position: sticky; top: 20px">
-        <h1 style="margin-bottom: 20px">{{ product.title }}</h1>
-        <p>Diam in venenatis, henderit id sit felis ullamcorper sed maecenas</p>
+        <h1 >{{ product.title }}</h1>
+        <p style="margin-top: 40px">Diam in venenatis, henderit id sit felis ullamcorper sed maecenas</p>
       </div>
     </div>
 
@@ -168,7 +168,7 @@
                 aria-hidden="true"
               >{{ 'products.product.loader_label' | t }}</p>
       
-              <div class="product-single__description rte" style="grid-column: 4 / 7;">
+              <div class="product-single__description rte" style="grid-column: 4 / 8;">
                 {{ product.description }}
               </div>
 
