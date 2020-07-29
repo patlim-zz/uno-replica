@@ -93,7 +93,7 @@
 
 .promise-custom {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   padding: 0 50px;
   &--html1,
   &--html2 {
@@ -101,6 +101,12 @@
       padding-left: 10px;
       color: grey;
     }
+  }
+  .custom__item--text {
+    grid-column: 1 / 4;
+  }
+  .custom__item--html {
+    grid-column: span 3
   }
 }
 
