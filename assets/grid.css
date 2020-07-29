@@ -1,7 +1,7 @@
 /* -----  Grids  --------------------------------------------- */
 
 .grid-auto {
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: auto;
   grid-column-gap:  20px;

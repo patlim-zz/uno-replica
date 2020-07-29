@@ -25,7 +25,7 @@
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-  <ul class="collection-grid-custom grid grid--uniform grid--view-items">
+  <ul class="grid grid--uniform grid--view-items" style="grid-column: 4 / 13; margin-left: 0">
     {% for product in collection.products limit: product_limit %}
       <li class="collection-grid__item-custom grid__item grid__item--{{section.id}} {{ grid_item_width }}">
         {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
