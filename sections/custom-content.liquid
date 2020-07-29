@@ -61,7 +61,7 @@
       {% endif %}
       
       <div class="custom__item custom__item--{{ block.type }} custom__item--{{ block.id }} {{ block_width_mobile }} {{ block_width }}{% if block.settings.alignment %} align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
-        <div class="custom__item-inner custom__item-inner--{{ block.type }} "{% if block.type == 'image' %} id="{{ img_wrapper_id }}"{% endif %}>
+        <div class="custom__item-inner custom__item-inner--{{ block.type }}"{% if block.type == 'image' %} id="{{ img_wrapper_id }}"{% endif %} {%if block.type == 'link_list'%}style="display: flex;" {%endif%}>
           {% case block.type %}
             {% when 'image' %}
               {% if block.settings.image != blank %}
@@ -135,7 +135,7 @@
               {% endif %}
             {%- when 'link_list' -%}
               {%- assign custom_linklist = block.settings.menu -%}
-              <ul class="list--inline custom__linklist">
+              <ul class="list--inline custom__linklist" style="margin-right: 50px;">
                 {%- for link in linklists[custom_linklist].links -%}
                   <li class="custom__linklist-item">
                     <a class="custom__linklist-link category-menu" id={{ link.title }}>

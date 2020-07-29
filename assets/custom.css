@@ -144,16 +144,21 @@
 .categories-custom {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
   padding: 0 50px;
 }
 
-.custom__item-inner--link_list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+.categories-custom .custom__item--text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+}
+
+.custom__item--1593081417129 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-column: 4 / 13;
 }
 
 .list--inline li {

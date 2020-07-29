@@ -16,7 +16,6 @@
 }
 
 .collection-grid__item-custom {
-
 }
 
 .grid-view-item__image-wrapper {
@@ -106,7 +105,7 @@
     grid-column: 1 / 4;
   }
   .custom__item--html {
-    grid-column: span 3
+    grid-column: span 3;
   }
 }
 
@@ -120,13 +119,15 @@
 
 .categories-custom {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: repeat(12, 1fr);
   padding: 0 50px;
+  .custom__item--text {
+    grid-column: 1 / 4;
+  }
 }
 
-.custom__item-inner--link_list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.custom__item--1593081417129 {
+  grid-column: 4 / 13;
 }
 
 .list--inline li {
