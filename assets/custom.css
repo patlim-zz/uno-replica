@@ -251,7 +251,13 @@
   margin-top: 0;
 }
 
-#shopify-section-1592977465183 .page-width, #shopify-section-1592889842642 .page-width, #shopify-section-1592889690280 .page-width {
+#shopify-section-1592977465183 .page-width,
+#shopify-section-1592889842642 .page-width,
+#shopify-section-1592889690280 .page-width {
   max-width: unset;
+}
+
+.site-footer__rte p {
+  margin: 0;
 }
 /*# sourceMappingURL=custom.css.map */
